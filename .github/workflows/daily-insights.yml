@@ -1,0 +1,58 @@
+name: Daily Insights Collection
+
+on:
+  schedule:
+    # 每天 UTC 2:00 运行 (北京时间 10:00)
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    # 支持手动触发
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  collect-and-sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        
+    - name: Configure Lark CLI
+      run: |
+        # 从 secrets 获取飞书配置
+        lark-cli config init --app-id "${{ secrets.LARK_APP_ID }}" --app-secret "${{ secrets.LARK_APP_SECRET }}" --brand feishu
+        
+    - name: Run data collection
+      run: |
+        python main.py
+        
+    - name: Sync to Lark (if collection succeeded)
+      if: success()
+      run: |
+        python src/sync_to_lark_api.py
+        
+    - name: Upload artifacts
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: insights-data
+        path: |
+          data/*.json
+          data/*.csv
+        retention-days: 30
+        
+    - name: Send notification on failure
+      if: failure()
+      run: |
+        echo "❌ Daily insights collection failed!"
+        echo "Please check the logs for details."

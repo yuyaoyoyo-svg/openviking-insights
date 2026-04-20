@@ -1,0 +1,91 @@
+{
+  "projects": [
+    {
+      "name": "OpenViking",
+      "owner": "volcengine",
+      "repo": "OpenViking",
+      "type": "self",
+      "package_name": "openviking"
+    },
+    {
+      "name": "NevaMind-AI/memU",
+      "owner": "NevaMind-AI",
+      "repo": "memU",
+      "type": "peer",
+      "package_name": ""
+    },
+    {
+      "name": "lancedb/lancedb",
+      "owner": "lancedb",
+      "repo": "lancedb",
+      "type": "peer",
+      "package_name": "lancedb"
+    },
+    {
+      "name": "tobi/qmd",
+      "owner": "tobi",
+      "repo": "qmd",
+      "type": "peer",
+      "package_name": ""
+    },
+    {
+      "name": "mem0ai/mem0",
+      "owner": "mem0ai",
+      "repo": "mem0",
+      "type": "peer",
+      "package_name": "mem0ai"
+    },
+    {
+      "name": "LycheeMem/LycheeMem",
+      "owner": "LycheeMem",
+      "repo": "LycheeMem",
+      "type": "peer",
+      "package_name": ""
+    },
+    {
+      "name": "zjunlp/LightMem",
+      "owner": "zjunlp",
+      "repo": "LightMem",
+      "type": "peer",
+      "package_name": ""
+    },
+    {
+      "name": "agentscope-ai/ReMe",
+      "owner": "agentscope-ai",
+      "repo": "ReMe",
+      "type": "peer",
+      "package_name": ""
+    },
+    {
+      "name": "supermemoryai/supermemory",
+      "owner": "supermemoryai",
+      "repo": "supermemory",
+      "type": "peer",
+      "package_name": ""
+    },
+    {
+      "name": "openclaw/openclaw",
+      "owner": "openclaw",
+      "repo": "openclaw",
+      "type": "peer",
+      "package_name": ""
+    },
+    {
+      "name": "NousResearch/hermes-agent",
+      "owner": "NousResearch",
+      "repo": "hermes-agent",
+      "type": "peer",
+      "package_name": ""
+    },
+    {
+      "name": "bytedance/deer-flow",
+      "owner": "bytedance",
+      "repo": "deer-flow",
+      "type": "peer",
+      "package_name": ""
+    }
+  ],
+  "github_token": "",
+  "lark_base_token": "KJknbcXDJaQfjjs8yAvcnNKKnsg",
+  "lark_table_id": "tbla5rlIN8S6miy5"
+}
