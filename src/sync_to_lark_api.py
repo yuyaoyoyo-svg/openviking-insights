@@ -106,10 +106,10 @@ def main():
     success = sync_to_lark_bitable(records)
 
     if success:
-        logger.info("✓ 飞书同步完成！")
+        logger.info("飞书同步完成！")
         logger.info(f"📊 查看数据: https://bytedance.larkoffice.com/base/{BASE_TOKEN}")
     else:
-        logger.error("✗ 飞书同步失败")
+        logger.error("飞书同步失败")
 
     return success
 
