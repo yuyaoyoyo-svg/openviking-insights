@@ -12,10 +12,10 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # 飞书配置
-LARK_APP_ID = "cli_a93916aeff3adcc4"
-LARK_APP_SECRET = "x9KbzqiiNNqRfsPeX18G4gHtfyUR1YSR"
-BASE_TOKEN = "KJknbcXDJaQfjjs8yAvcnNKKnsg"
-TABLE_ID = "tbla5rlIN8S6miy5"
+LARK_APP_ID = ""
+LARK_APP_SECRET = ""
+BASE_TOKEN = ""
+TABLE_ID = ""
 
 
 def get_tenant_access_token():
